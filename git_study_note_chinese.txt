@@ -1,0 +1,76 @@
+学习笔记：
+本Git也叫msysGit。
+在复习过程中发现文档中提到了github自身也提供了终端。故准备下载试试。下载速度很慢20K左右，软件本身99M（20210222）
+一、了解并掌握的Git命令
+git clone git://git.kernel.org/pub/scm/git/git.git
+这个命令半天没动静，后来强行中断放弃了。
+git config --global user.name "myjackfox"
+git config --global user.email "myjackfox@163.com"
+
+git config --global core.editor emacs
+这个命令没执行，放弃了。
+
+git config --list
+列出配置
+
+git config user.name
+
+git help config
+
+Git基础
+git init
+git add *.c
+git add LICENSE
+git commit -m 'Initial project version'
+
+git clone https://github.com/myjackfox/mystudy_git
+
+git status
+
+git add readme
+
+git status -s
+
+git diff
+
+git diff --staged
+git diff --cached
+
+git difftool --tool-help
+
+git commit
+
+git commit -m "Story 182: Fix benchmarks for speed"
+
+git rm PROJECTS.md
+git rm --cached README
+
+git mv file_from file_to
+
+git log
+git log -p -2
+git log --stat
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --pretty=format:"%h %s" --graph
+git log --since=2.weeks
+git log -Sfunction_name
+
+git commit --amend
+
+git remote -v
+git remote
+git remote pd https://github.com/paulboone/ticgit
+git fetch pd
+
+git push origin master
+git remote show orgin
+
+git remote rm
+
+git tag
+git tag -l 'V1.1'
+git tag -a v1.1 -m "my version 1.1"
+git show v1.1
+
+git分支
