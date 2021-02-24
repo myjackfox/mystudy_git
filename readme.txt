@@ -22,4 +22,17 @@ git checkout master
 在commit时而是注释一个特殊内容。
 
 现在模拟进入一个紧急修复分支hotfix1。
+git checkout -b hotfix1
 这里多了一行，hotfix行。
+git add readme.txt
+git commit -a -m "in branch hotfix1:Add a hotfix line in readme.txt"
+git checkout master
+git merge hotfix1
+
+经过修复与合并后，切换到master，删除掉已经合并的分支。
+git branch -d hotfix
+
+以上就是完成了修复，并将正式上线的修复分支并入master。
+下步就是切回到问题修改处，继续修改iss3的问题。
+git checkout iss3
+继续修改。
