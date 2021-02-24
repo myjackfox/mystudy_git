@@ -28,3 +28,8 @@ git status
 git checkout -b iss3
 修改readme.txt
 在分支iss3下修改的内容。
+
+中途因出现紧急情况暂停iss3处理，转回master进行hotfix分支紧急修复，然后合并入master。
+处理好后，再转回到iss3继续进行处理（记录本次操作情况说明）。
+
+
