@@ -62,3 +62,83 @@ Auto-merging readme.txt
 CONFLICT (content): Merge conflict in readme.txt
 Automatic merge failed; fix conflicts and then commit the result.
 然后再打开readme.txt后，内容就变成了了上面的样子，两个部分用单书引号括住
+
+尝试
+git mergetool
+返回如下信息：
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+tortoisemerge emerge vimdiff
+No files need merging
+
+主要就是没有配置。
+
+
+git branch
+git branch -v
+git branch --merged
+git branch --no-merged
+
+在掌握分支知识后，了解常见的工作流程：
+长期分支、特性分支 
+
+远程分支
+git remote show github
+信息如下：
+* remote github
+  Fetch URL: git@github.com:myjackfox/mystudy_git.git
+  Push  URL: git@github.com:myjackfox/mystudy_git.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (fast-forwardable)
+git ls-remote github
+信息如下：
+3501a2af40952d0cf151e433eb1451d3008bd920        HEAD
+3501a2af40952d0cf151e433eb1451d3008bd920        refs/heads/master
+0411fbf9ba8117e83f306f09ee85a2f2e097b029        refs/tags/V1.0
+7b32e45654f1a7202dd858e783f2806a01021124        refs/tags/V1.0^{}
+c9d295cf9eacff1e5e2cb5ce8c59ca9c43d509b3        refs/tags/V1.1
+67e6630adf5c2431549d8a3bcfbd61a4d2a597ec        refs/tags/V1.1^{}
+902bbc87ca1c540d93f4bca571ee97175194da38        refs/tags/V2.0
+1f43b86e3bad972ad1ad452f0fdced2b124f915a        refs/tags/V2.0^{}
+0411fbf9ba8117e83f306f09ee85a2f2e097b029        refs/tags/show
+7b32e45654f1a7202dd858e783f2806a01021124        refs/tags/show^{}
+
+远程分支这部分走马观花，因为没有实际用起来，不好理解。
+
+推送
+git push origin servefix
+git fetch origin
+git checkout -b serverfix origin/serverfix
+
+跟踪分支
+git checkout --track origin/serverfix
+git checkout -b sf origin/serverfix
+git branch -u origin/serverfix
+git branch -vv
+
+拉取
+
+删除远程分支
+git push origin --delete serverfix
+
+变基
+git checkout experiment
+git rebase master
+
+git checkout master
+git merge experiment
+
+git rebase --onto master server client
+git checkout master
+git merge client
+git rebase master server
+git checkout master
+git merge server
+git branch -d client
+git branch -d server
+
+变基的风险
