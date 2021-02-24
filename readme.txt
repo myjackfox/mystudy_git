@@ -20,3 +20,11 @@ git checkout master
 
 继续修改readme.txt内容，但没有修改分支名。
 在commit时而是注释一个特殊内容。
+
+这个时候，工作目录是干净了。
+git status
+已经确认。
+开始模拟在正常工作基础上，针对问题iss3进行分支处理。
+git checkout -b iss3
+修改readme.txt
+在分支iss3下修改的内容。
