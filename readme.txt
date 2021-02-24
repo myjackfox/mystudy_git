@@ -20,3 +20,6 @@ git checkout master
 
 继续修改readme.txt内容，但没有修改分支名。
 在commit时而是注释一个特殊内容。
+
+现在模拟进入一个紧急修复分支hotfix1。
+这里多了一行，hotfix行。
