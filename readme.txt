@@ -142,3 +142,9 @@ git branch -d client
 git branch -d server
 
 变基的风险
+
+20210301
+前几天基本都是研究局域网Git服务器设置问题。已经成功，相关的参考资料已经存入为知笔记中。
+就是Windows2008R2+gitbilt构成，需要额外安装VS2005distribution+JAVA8SDK支撑环境。安装后需要修改相应的配置文件，然后按照特定端口用IE打开。
+
+周末看了微信中的公众号的Git命令大全。
