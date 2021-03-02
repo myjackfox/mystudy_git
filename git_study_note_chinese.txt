@@ -127,3 +127,23 @@ Fork派生项目，项目被复制到自己的空间，赋予可修改权限。需要通过合并需求（Pull Req
   提交区间
 
 学到P207。开始尝试自行合并。合并结束后，删除分支，保留master。
+
+
+20210302继续学习Git
+ProGit基本上已经翻了一遍，觉得没啥可认真的，基本上就是一边用一边体会书上所述内容进行对比对照。
+
+今日打算从SQL学习开始入手，为其建立一个Git，然后每日学习1-2页Online内容，做一个SQL题，写一个学习笔记，git到github上。
+正好借此复习一遍Git仓库建立过程。
+1、建立文件夹“SQL联机丛书”，并建立一份readme.txt。
+2、Git init
+3、git add .
+4、git commit -m "init version:First File, README.txt"
+5、在GitHub创建一个新仓库，sql_onlinedoc。下面的代码是GitHub推荐的，我就直接用了。
+6、git remote add origin https://github.com/myjackfox/SQL_OnlineDoc.git
+7、git branch -M main    这个开关是将旧的分支名强制更名为新的分支名
+8、git push -u origin main  在push过程中，保证为每个branch建立可跟踪的逆向引用。
+
+在执行第6步时，弄错窗口了，跑到Git那个Bash执行了，估计把原来的origin给冲了。不过，影响不大，所以要去掉这个别名。
+执行命令git remote rm origin即可。
+后面都基本正常了。
+今天暂时就学这些了。要记得git自己的分支暂时维持。
