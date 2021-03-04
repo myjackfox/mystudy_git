@@ -178,4 +178,24 @@ ProGit基本上已经翻了一遍，觉得没啥可认真的，基本上就是一边用一边体会书上所述内容
 7、今日结束。例行push全部内容。成功完成。
 
 
+20210304：
+1、启动本地文件夹GitBash，更新Git。
+2、git status检查发现如下信息：
+	LIHUI@LIHUI-PC MINGW64 /d/MyStudy/Git (newnotes_20210302)
+	$ git status
+	On branch newnotes_20210302
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+	  (commit or discard the untracked or modified content in submodules)
 
+	        modified:   mystudy_git (untracked content)
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+	查找资料后，经过试验，用下列命令序列似乎可以解决：
+	a、文件夹删除mystudy_git\.git这个文件夹
+	b、git rm --cached mystudy_git
+        c、git add mystudy_git
+        执行结束后再git status就正常了。
+3、完成了SQL学习任务，感觉学到了点东西。
+4、觉得git管理项目真的很不错。
